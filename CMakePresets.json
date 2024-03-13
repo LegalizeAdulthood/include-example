@@ -19,10 +19,10 @@
       "toolchainFile": "${sourceDir}/vcpkg/scripts/buildsystems/vcpkg.cmake"
     },
     {
-      "name": "gen-ninja",
+      "name": "gen-makefiles",
       "hidden": true,
-      "description": "Configure with the Ninja generator",
-      "generator": "Ninja"
+      "description": "Configure with the Unix Makefiles generator",
+      "generator": "Unix Makefiles"
     },
     {
       "name": "compile-commands",
@@ -40,7 +40,7 @@
     {
       "name": "include-what-you-use",
       "displayName": "Configure with Include What You Uset settings",
-      "inherits": [ "sibling-build-preset", "compile-commands", "gen-ninja" ]
+      "inherits": [ "sibling-build-preset", "compile-commands", "gen-makefiles" ]
     }
   ],
   "buildPresets": [

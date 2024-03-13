@@ -28,3 +28,15 @@ jobs:
 
     - name: CMake workflow
       run: cmake --workflow --preset default
+
+  include-what-you-use:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4.1.1
+      with:
+        submodules: true
+
+    - name: CMake workflow
+      run: cmake --workflow --preset include-what-you-use
+

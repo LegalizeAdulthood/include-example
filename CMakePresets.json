@@ -19,9 +19,28 @@
       "toolchainFile": "${sourceDir}/vcpkg/scripts/buildsystems/vcpkg.cmake"
     },
     {
+      "name": "gen-ninja",
+      "hidden": true,
+      "description": "Configure with the Ninja generator",
+      "generator": "Ninja"
+    },
+    {
+      "name": "compile-commands",
+      "hidden": true,
+      "description": "Configure with compile_commands.json",
+      "cacheVariables": {
+        "CMAKE_EXPORT_COMPILE_COMMANDS": true
+      }
+    },
+    {
       "name": "default",
       "displayName": "Configure with default settings",
       "inherits": [ "sibling-build-preset" ]
+    },
+    {
+      "name": "include-what-you-use",
+      "displayName": "Configure with Include What You Uset settings",
+      "inherits": [ "sibling-build-preset", "compile-commands", "gen-ninja" ]
     }
   ],
   "buildPresets": [
@@ -57,6 +76,16 @@
         {
           "type": "test",
           "name": "default"
+        }
+      ]
+    },
+    {
+      "name": "include-what-you-use",
+      "displayName": "Workflow with Include What You use settings: configure",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "include-what-you-use"
         }
       ]
     }

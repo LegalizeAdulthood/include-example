@@ -7,6 +7,7 @@ project(include-example CXX)
 add_executable(include-example
     main.cpp
     transitive.h
+    transitive.cpp
 )
 set_target_properties(include-example PROPERTIES
     CXX_STANDARD 11

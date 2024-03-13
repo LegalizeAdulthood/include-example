@@ -4,7 +4,10 @@ set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
 project(include-example CXX)
 
-add_executable(include-example main.cpp)
+add_executable(include-example
+    main.cpp
+    transitive.h
+)
 set_target_properties(include-example PROPERTIES
     CXX_STANDARD 11
     CXX_STANDARD_REQUIRED ON)

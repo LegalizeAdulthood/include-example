@@ -41,11 +41,11 @@ jobs:
       run: cmake --workflow --preset include-what-you-use
 
     - name: List compile_commands.json
-      run: ls ../build-include-what-you-use/compile_commands.json
+      run: ls build-include-what-you-use/compile_commands.json
 
     - name: Include What You Use
       uses: EmilGedda/include-what-you-use-action@v1.0
       with:
-        compilation-database-path: '../build-include-what-you-use'
+        compilation-database-path: 'build-include-what-you-use'
         # output-format: 'iwyu' or 'clang'
         no-error: 'true'

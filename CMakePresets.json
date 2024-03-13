@@ -13,6 +13,12 @@
       "binaryDir": "${sourceDir}/../build-${presetName}"
     },
     {
+      "name": "child-build-preset",
+      "hidden": true,
+      "description": "Use a child directory for the build based on the preset name",
+      "binaryDir": "build-${presetName}"
+    },
+    {
       "name": "vcpkg",
       "hidden": true,
       "description": "Configure the toolchain for vcpkg",
@@ -40,7 +46,7 @@
     {
       "name": "include-what-you-use",
       "displayName": "Configure with Include What You Uset settings",
-      "inherits": [ "sibling-build-preset", "compile-commands", "gen-makefiles" ]
+      "inherits": [ "child-build-preset", "compile-commands", "gen-makefiles" ]
     }
   ],
   "buildPresets": [

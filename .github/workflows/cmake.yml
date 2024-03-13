@@ -48,4 +48,4 @@ jobs:
       with:
         compilation-database-path: 'build-include-what-you-use'
         # output-format: 'iwyu' or 'clang'
-        no-error: 'true'
+        no-error: 'false'

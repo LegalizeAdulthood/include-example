@@ -41,7 +41,7 @@ jobs:
       run: cmake --workflow --preset include-what-you-use
 
     - name: Include What You Use
-      uses: EmilGedda/include-what-you-use-action@v1
+      uses: EmilGedda/include-what-you-use-action@v1.0
       with:
         compilation-database-path: '../build-include-what-you-use'
         # output-format: 'iwyu' or 'clang'
